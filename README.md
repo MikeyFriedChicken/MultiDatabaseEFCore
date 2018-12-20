@@ -3,14 +3,15 @@
 
 Sample code for easily switching between different database types whislt allowing for database specific settings such as column types to be configured database specifically.
 
-In this example I show how to configure
+In this example I show how to configure the following databases ...
 
   - Microsoft SQL Server
   - Postgres SQL
 
-I show how to use dependency injection to achieve this.
+... and show how to use dependency injection and subclasses to achieve this.
 
-Depending on the configuration direct the kind of DBContext to be created:
+Firstly, depending on the configuration create the appropriate instance of DBContext:
+
 ```csharp
         public void ConfigureServices(IServiceCollection services)
         {
@@ -30,7 +31,7 @@ Depending on the configuration direct the kind of DBContext to be created:
             }
         }
 ```
-SQL Server
+'ConfigureSQLServer'
 ```csharp
         private void ConfigureSQLServer(DbContextOptionsBuilder options)
         {
@@ -41,7 +42,7 @@ SQL Server
         }
 ```
 
-Postgres SQL:
+and 'ConfigurePostgresSQL'
 
 ```csharp
         private void ConfigurePostgresSQL(DbContextOptionsBuilder options)
@@ -102,8 +103,9 @@ Define a sub class for SQL Server
 
 ```
 
-Define a subclass for Postgres SQL
 
+
+Define a subclass for Postgres SQL
 ```csharp
     public class PeopleDBContext : DbContext
     {
