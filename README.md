@@ -56,7 +56,8 @@ and 'ConfigurePostgresSQL'
 
 In this sample we have a Person entity as shown below.  For FirstName and LastName we can set the typename as an attribute as all databases support this.  However, we leave MetaInfo for now as we would like to have different types depending on whether SQL Server or Postgres SQL is used.
 
-SQL Server
+Our 'Person' model class:
+
 ```csharp
     public class Person
     {
