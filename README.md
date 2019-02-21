@@ -1,6 +1,6 @@
 # Support Multiple Database in Entity Framework Core
 
- Click [here] for the Medium Post (https://medium.com/@michaelceber/how-to-support-multiple-databases-in-entity-framework-core-1ccd24896829)
+Click [here](https://medium.com/@michaelceber/how-to-support-multiple-databases-in-entity-framework-core-1ccd24896829) for the Medium Post.
  
 Sample code for easily switching between different database types whislt allowing for database specific settings such as column types to be configured database specifically.
 
